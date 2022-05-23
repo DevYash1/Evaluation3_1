@@ -1,4 +1,7 @@
 //store the products array in localstorage as "products"
+document.querySelector("#show_products").onclick = function (){
+    location.href = "inventory.html";
+}
 function PumaProduct(t,d,p,i){
     this.type = t;
     this.desc = d;
@@ -20,5 +23,7 @@ function addProduct(){
     var product = new PumaProduct(type, desc, price, image);
     productarray.push(product);
     localStorage.setItem("products", JSON.stringify(productarray));
-    
+
+    var form = document.querySelector("#products")
+    form.reset();
 }

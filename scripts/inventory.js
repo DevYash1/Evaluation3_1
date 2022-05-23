@@ -1,3 +1,7 @@
+document.querySelector("#add_more_product").onclick = function (){
+    location.href = "index.html";
+}
+
 var alldetails = JSON.parse(localStorage.getItem("products"));
 console.log(alldetails);
 alldetails.forEach(function (elem, index){
@@ -20,7 +24,7 @@ alldetails.forEach(function (elem, index){
     
     var removeBtn = document.createElement("button");
     removeBtn.innerText = "Remove";
-    removeBtn.setAttribute("id", "removeButton");
+    removeBtn.setAttribute("id", "remove_product");
 
     removeBtn.addEventListener("click", function(){
         removeFun(elem, index);
